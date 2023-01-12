@@ -21,6 +21,14 @@ import img_five_exp from '../img/img_five_exp.jpg'
 import img_six_exp from '../img/img_six_exp.jpg'
 import logo_smile from '../img/smileeye.png'
 import menu from '../img/menu.svg'
+import close_icon from '../img/close.svg'
+import back_icon from '../img/back.svg'
+import btn_exp from '../img/btn_exp.svg'
+import exp_full_icon from '../img/exp_full.svg'
+import cup_icon from '../img/cup.svg'
+import conversation from '../img/conversation.png'
+import newone from '../img/newone.png'
+import newtwo from '../img/newtwo.png'
 
 export const images = {
     user_icon,
@@ -45,5 +53,13 @@ export const images = {
     img_five_exp,
     img_six_exp,
     logo_smile,
-    menu
+    menu,
+    close_icon,
+    back_icon,
+    btn_exp,
+    exp_full_icon,
+    cup_icon,
+    conversation,
+    newone,
+    newtwo
 }

@@ -87,21 +87,25 @@ const arrayObjCourse = [
         key: "n5",
         label: " N5: Tiếng nhật hàng ngày",
         title: "N5",
+        labelexp: "N5: Trải nghiệm người dùng"
     },
     {
         key: "n4",
         label: " N4: Tiếng Nhật trong cuộc sống",
-        title: "N4"
+        title: "N4",
+        labelexp: "N4: Trải nghiệm người dùng"
     },
     {
         key: "n3",
         label: " N3: Quản trị cảm xúc",
-        title: "N3"
+        title: "N3",
+        labelexp: "N3: Trải nghiệm người dùng"
     },
     {
         key: "n2",
         label: " N2: Tiếng Nhật business",
-        title: "N2"
+        title: "N2",
+        labelexp: "N2: Trải nghiệm người dùng"
     },
 
 ]

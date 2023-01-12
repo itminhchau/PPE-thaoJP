@@ -1,4 +1,5 @@
 export const path = {
     HOME: '/',
-    CATEGORY: '/category/:id'
+    CATEGORY: '/category/:id',
+    PLAY: '/play/:id'
 };

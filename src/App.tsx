@@ -13,22 +13,33 @@ import {
 import { path } from "./utils/constaint";
 import HomePage from "./layouts/homePage/HomePage";
 import CategoryPage from "./layouts/categoryPage/CategoryPage";
+import ShowSiderContextProvider from "./contexts/ShowSiderContextProvider";
+import PlayPage from "./layouts/playPage/PlayPage";
+import IsExpContextProvider from "./contexts/IsExpContextProvider";
 const App = () => {
   return (
     <Fragment>
-      <Router>
-        <HeaderPage
-          title={"minhchau"}
-        />
-        <Switch>
-          <Route exact path={path.HOME}>
-            <HomePage />
-          </Route>
-          <Route path={path.CATEGORY}>
-            <CategoryPage />
-          </Route>
-        </Switch>
-      </Router>
+      <ShowSiderContextProvider>
+        <IsExpContextProvider>
+          <Router>
+            <HeaderPage
+              title={"minhchau"}
+            />
+            <Switch>
+              <Route exact path={path.HOME}>
+                <HomePage />
+              </Route>
+              <Route path={path.CATEGORY}>
+                <CategoryPage />
+              </Route>
+              <Route path={path.PLAY}>
+                <PlayPage />
+              </Route>
+            </Switch>
+          </Router>
+        </IsExpContextProvider>
+      </ShowSiderContextProvider>
+
       {/* <div
         style={{
           display: "flex",

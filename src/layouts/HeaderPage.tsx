@@ -1,7 +1,7 @@
 import type { MenuProps } from 'antd';
 import { Layout, Menu } from 'antd';
 import type { SizeType } from 'antd/es/config-provider/SizeContext';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import facebook from '../assets/img/facebook.svg';
 import instagram from '../assets/img/instagram.svg';
 import mail from '../assets/img/mail.svg';
@@ -10,6 +10,7 @@ import phone from '../assets/img/phone.svg';
 import { images } from '../assets/img/index';
 import twitter from '../assets/img/twitter.svg';
 import { useHistory } from 'react-router-dom';
+import { ShowSiderContext } from '../contexts/ShowSiderContextProvider';
 const { Header, Content, Sider } = Layout;
 
 const items1: MenuProps['items'] = ['Trang Chủ', 'Giới Thiệu', 'Liên Hệ'].map(key => ({
@@ -26,7 +27,11 @@ const HeaderPage = ({ title }: IHeaderPage) => {
   const handleBackHome = () => {
     history.push('/')
   }
-  console.log("check ", title);
+
+  const { showSiderBar } = useContext(ShowSiderContext)
+  const handleShowSider = () => {
+    showSiderBar()
+  }
 
   return (
 
@@ -47,7 +52,7 @@ const HeaderPage = ({ title }: IHeaderPage) => {
         <div className='bot-header '>
           <div className='logo-header cursor-pointer basis-2/6   mx-auto my-auto flex items-center gap-4'>
             <img src={images.logo_smile} alt="logo" onClick={() => handleBackHome()} />
-            <img src={images.menu} alt="" />
+            <img src={images.menu} alt="" onClick={() => handleShowSider()} />
           </div>
           <div className="search-header basis-2/6">
             <div className="wrap-input relative h-[40px] w-[385px] ml-7">

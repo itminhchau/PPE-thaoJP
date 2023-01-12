@@ -49,6 +49,7 @@
     margin-top: 13px;
 }
 
+
 /* css content-home slick */
 .slick-slider .slick-list{
     position: relative;
@@ -83,3 +84,4 @@
     content: ">";
     color: rgb(125, 124, 124);
 }
+
